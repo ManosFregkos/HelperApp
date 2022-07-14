@@ -14,6 +14,7 @@ export default function Contact() {
         rightIcon={<ArrowForwardIcon />}
         ml="64px"
         mb="72px"
+        borderRadius="99px"
       >
         Request your free demo
       </Button>

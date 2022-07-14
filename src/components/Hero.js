@@ -21,7 +21,12 @@ export default function Hero() {
         for non-programmers that helps you to speed up your digital production
         processes
       </Text>
-      <Button bgColor="#4F4FFF" mt="32px" rightIcon={<ArrowForwardIcon />}>
+      <Button
+        bgColor="#4F4FFF"
+        borderRadius="99px"
+        mt="32px"
+        rightIcon={<ArrowForwardIcon />}
+      >
         Request your free demo
       </Button>
     </Box>

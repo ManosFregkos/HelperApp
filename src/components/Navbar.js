@@ -19,7 +19,12 @@ export default function Navbar() {
           Composer{" "}
         </Text>
         <Spacer />
-        <Button bgColor="#4F4FFF" mt="10px" rightIcon={<ArrowForwardIcon />}>
+        <Button
+          bgColor="#4F4FFF"
+          mt="10px"
+          borderRadius="99px"
+          rightIcon={<ArrowForwardIcon />}
+        >
           Request your free demo
         </Button>
       </Flex>

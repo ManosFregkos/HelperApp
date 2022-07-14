@@ -12,7 +12,7 @@ export default function Footer() {
             Impulsum Venture Colab
           </Text>
           . All Rights Reserved.
-          <Text as="span" color="Privacy Policy">
+          <Text as="span" color="#4F4FFF">
             Privacy Policy
           </Text>
         </Text>
