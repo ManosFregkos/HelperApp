@@ -1,24 +1,28 @@
 import React from "react";
 import logo from "../images/ComposerLogo.png";
-import { Box, Image, Text, HStack, Spacer,Button} from "@chakra-ui/react"; 
+import { Box, Image, Text, Flex, Spacer, Button } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
-
-
-export default function Navbar(){
-    return (
-        
-       <Box w="100%"   >
-            <HStack>
-                <Image py="32px" pl="106px" src={logo}/>
-                <Text fontSize="28px" fontFamily="Roboto" color="white" ml="16px" letterSpacing="0.2em" fontWeight="900" >Composer </Text>
-                <Spacer />
-                <Button bgColor="#4F4FFF" rightIcon={<ArrowForwardIcon />}  >Request your free demo</Button>
-            </HStack>
-            
-           
-       </Box>
-       
-       
-    )
+export default function Navbar() {
+  return (
+    <Box w="100%" h="124px">
+      <Flex pt="32px" pl="106px" pr="106px">
+        <Image src={logo} />
+        <Text
+          fontSize="28px"
+          fontFamily="Roboto"
+          color="white"
+          fontWeight="900"
+          pl="16px"
+          mt="10px"
+        >
+          Composer{" "}
+        </Text>
+        <Spacer />
+        <Button bgColor="#4F4FFF" mt="10px" rightIcon={<ArrowForwardIcon />}>
+          Request your free demo
+        </Button>
+      </Flex>
+    </Box>
+  );
 }
