@@ -8,26 +8,31 @@ import {
   Button,
   Text,
   Box,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import githublogo from "../images/Github.svg";
 import figmalogo from "../images/Figma.svg";
 
-export default function () {
+export default function Contribute() {
+  const [isLargerThan1024] = useMediaQuery("(min-width: 1024px)");
   return (
-    <Box h="500px" pt="200px">
-      <HStack ml="106" mr="106px" h="32px" pt="92px" color="white">
-        <Box w="400px">
-          <Image src={githublogo} pb="16px" pr="240px" />
-          <Heading fontSize="20px" lineHeight="24px" w="271px" pb="24px">
+
+    <Box display={"flex"} flexDirection={isLargerThan1024 ? "row" : "column"} pt="100px">
+      {/* <HStack > */}
+        <Box  mr={"20px"} width={isLargerThan1024 ? "33%" : "100%"}  pt="92px" color="white">
+          <Image src={githublogo} pb="16px"  />
+          <Heading fontSize="20px" lineHeight="24px"  pb="24px">
             Composer is open-sourced on GitHub. You're welcome to contribute!
           </Heading>
           <Button bgColor="#4F4FFF" borderRadius="99px">
             Contribute on GitHub
           </Button>
         </Box>
-        <Box w="400px">
-          <Image src={figmalogo} pb="16px" pr="270px" />
-          <Heading fontSize="20px" lineHeight="24px" w="301px" pb="24px">
+      {/* </HStack> */}
+      {/* <HStack  w={"100%"}  h="32px" pt="92px" color="white"> */}
+      <Box mr={"20px"} width={isLargerThan1024 ? "33%" : "100%"} pt="92px" color="white">
+          <Image src={figmalogo} pb="16px" />
+          <Heading fontSize="20px" lineHeight="24px" pb="24px">
             Composer is part of the Figma community. Visit us with the handle
             @impulsum
           </Heading>
@@ -35,7 +40,9 @@ export default function () {
             Contribute on Figma
           </Button>
         </Box>
-        <Box w="400px" pt="56px">
+      {/* </HStack> */}
+      {/* <HStack  w={"100%"} h="32px" pt="92px" color="white"> */}
+      <Box width={isLargerThan1024 ? "33%" : "100%"} pt="92px" color="white">
           <Heading fontSize="20px" lineHeight="24px">
             Keep in touch
           </Heading>
@@ -49,46 +56,8 @@ export default function () {
             Meet the crew on Instagram
           </Text>
         </Box>
-      </HStack>
+      {/* </HStack> */}
     </Box>
+
   );
-}
-
-{
-  /* <VStack w="400px">
-          <Image src={githublogo} pb="16px" pr="240px" />
-          <Heading
-            fontSize="20px"
-            lineHeight="24px"
-            ml="32px"
-            w="271px"
-            pb="24px"
-          >
-            Composer is open-sourced on GitHub. You're welcome to contribute!
-          </Heading>
-          <Button bgColor="#4F4FFF">Contribute on GitHub</Button>
-        </VStack>
-
-        <VStack w="400px">
-          <Image src={figmalogo} pb="16px" pr="270px" />
-          <Heading fontSize="20px" lineHeight="24px" w="301px" pb="24px">
-            Composer is part of the Figma community. Visit us with the handle
-            @impulsum
-          </Heading>
-          <Button bgColor="#4F4FFF">Contribute on Figma</Button>
-        </VStack>
-        <VStack w="400px" pt="100px">
-          <Heading fontSize="20px" lineHeight="24px">
-            Keep in touch
-          </Heading>
-          <Text fontSize="14px" pt="24px">
-            Share feedback on GitHub
-          </Text>
-          <Text fontSize="14px" pt="24px">
-            Find us on Linkedin
-          </Text>
-          <Text fontSize="14px" pt="24px">
-            Meet the crew on Instagram
-          </Text>
-        </VStack> */
 }
